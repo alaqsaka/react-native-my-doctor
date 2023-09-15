@@ -1,6 +1,7 @@
 import {StyleSheet, Text, View} from 'react-native';
-import {ILLogo} from './assets';
+
 import React from 'react';
+import { ILLogo } from '../../assets';
 
 export default function Splash() {
   return (
