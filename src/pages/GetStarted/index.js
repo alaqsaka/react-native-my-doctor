@@ -1,21 +1,35 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { ImageBackground, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import { ILLogo } from '../../assets'
+import { ILGetStarted, ILLogo } from '../../assets'
 import { Button } from '../../components'
 
 export default function GetStarted() {
   return (
-    <View style={styles.page}>
-      <ILLogo />
-      <Text>Konsultasi dengan dokter jadi lebih mudah & fleksibel</Text>
-      <Button />
-      <Button />
-    </View>
+    <ImageBackground style={styles.page} source={ILGetStarted}>
+      <View>
+        <ILLogo />
+        <Text style={styles.title}>Easier & more flexible doctor consultations</Text>
+      </View>
+      <View>
+        <Button title="Get Started" />
+        <View style={{ height: 16 }}/>
+        <Button title="Sign In" type="secondary" />
+      </View>
+    </ImageBackground>
   )
 }
 
 const styles = StyleSheet.create({
   page: {
-    padding: 40
+    padding: 40,
+    justifyContent: 'space-between',
+    backgroundColor: 'white',
+    flex: 1
+  },
+  title: {
+    fontSize: 28,
+    fontWeight: '600',
+    color: 'white',
+    marginTop: 91
   }
 })
