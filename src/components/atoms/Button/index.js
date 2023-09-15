@@ -17,8 +17,8 @@ const styles = StyleSheet.create({
   }),
   text: (type) => ( {
     fontSize: 16,
-    fontWeight: '600',
     textAlign: 'center',
     color: type === "secondary" ? '#112340' : 'white',
+    fontFamily: 'Nunito-SemiBold'
   })
 })
