@@ -1,6 +1,6 @@
 import React from 'react'
 import {createNativeStackNavigator} from '@react-navigation/native-stack'
-import { GetStarted, Splash, Register, Login } from '../pages'
+import { GetStarted, Splash, Register, Login, UploadPhoto } from '../pages'
 
 const Stack = createNativeStackNavigator()
 
@@ -31,6 +31,13 @@ const Router = () => {
             <Stack.Screen 
                 name='Login' 
                 component={Login}  
+                options={{
+                    headerShown: false
+                }}
+            />
+            <Stack.Screen 
+                name='UploadPhoto' 
+                component={UploadPhoto}  
                 options={{
                     headerShown: false
                 }}
