@@ -1,10 +1,10 @@
-import { StyleSheet, View } from 'react-native'
-import React from 'react'
+import { StyleSheet, View } from 'react-native';
+import React from 'react';
 
-export default function Gap({height, width}) {
+export default function Gap({ height, width }) {
   return (
-    <View style={{ height: height, width: width }}/>
-  )
+    <View style={{ height, width }} />
+  );
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});

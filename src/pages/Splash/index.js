@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View} from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import React, { useEffect } from 'react';
 import { ILLogo } from '../../assets';
 import { colors, fonts } from '../../utils';
@@ -8,14 +8,16 @@ export default function Splash({ navigation }) {
     setTimeout(() => {
       navigation.replace('GetStarted');
     }, 3000);
-  },[]);
+  }, []);
 
   return (
     <View
-      style={styles.page}>
+      style={styles.page}
+    >
       <ILLogo />
       <Text
-        style={styles.title}>
+        style={styles.title}
+      >
         My Doctor
       </Text>
     </View>
@@ -25,15 +27,15 @@ export default function Splash({ navigation }) {
 const styles = StyleSheet.create({
   page: {
     backgroundColor: colors.white,
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    flex:            1,
+    alignItems:      'center',
+    justifyContent:  'center',
   },
   title: {
-    marginTop: 20,
-    fontSize: 20,
+    marginTop:  20,
+    fontSize:   20,
     fontWeight: '600',
-    color: colors.text.primary,
-    fontFamily: fonts.primary[600]
-  }
+    color:      colors.text.primary,
+    fontFamily: fonts.primary[600],
+  },
 });

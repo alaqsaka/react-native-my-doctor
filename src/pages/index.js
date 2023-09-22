@@ -8,12 +8,12 @@ import Hospitals from './Hospitals';
 import Messages from './Messages';
 
 export {
-    Splash, 
-    GetStarted, 
-    Login, 
-    Register, 
-    UploadPhoto, 
-    Doctor, 
-    Hospitals, 
-    Messages
+  Splash,
+  GetStarted,
+  Login,
+  Register,
+  UploadPhoto,
+  Doctor,
+  Hospitals,
+  Messages,
 };
