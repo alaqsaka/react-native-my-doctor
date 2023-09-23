@@ -1,10 +1,11 @@
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import React from 'react';
 import { TabItem } from '../../atoms';
+import { colors } from '../../../utils';
 
 export default function BottomNavigator({ state, descriptors, navigation }) {
   return (
-    <View style={{ flexDirection: 'row' }}>
+    <View style={styles.container}>
       {state.routes.map((route, index) => {
         const { options } = descriptors[route.key];
         const label =            options.tabBarLabel !== undefined
@@ -36,24 +37,25 @@ export default function BottomNavigator({ state, descriptors, navigation }) {
         };
 
         return (
-          <TabItem />
-          // <TouchableOpacity
-          //   accessibilityRole="button"
-          //   accessibilityState={isFocused ? { selected: true } : {}}
-          //   accessibilityLabel={options.tabBarAccessibilityLabel}
-          //   testID={options.tabBarTestID}
-          //   onPress={onPress}
-          //   onLongPress={onLongPress}
-          //   style={{ flex: 1 }}
-          // >
-          //   <Text style={{ color: isFocused ? '#673ab7' : '#222' }}>
-          //     {label}
-          //   </Text>
-          // </TouchableOpacity>
+          <TabItem
+            key={label}
+            title={label}
+            active={isFocused}
+            onPress={onPress}
+            onLongPress={onLongPress}
+          />
         );
       })}
     </View>
   );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flexDirection:     'row',
+    justifyContent:    'space-between',
+    paddingHorizontal: 53,
+    paddingVertical:   12,
+    backgroundColor:   colors.secondary,
+  },
+});
