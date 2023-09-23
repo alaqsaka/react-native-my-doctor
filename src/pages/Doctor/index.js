@@ -8,26 +8,30 @@ export default function Doctor() {
     <View style={styles.page}>
       <View style={styles.content}>
         <ScrollView showsVerticalScrollIndicator={false}>
-          <Gap height={30} />
-          <HomeProfile />
-          <Text style={styles.welcome}>Ready to consult with healthcare expert today?</Text>
+          <View style={styles.wrapperSection}>
+            <Gap height={30} />
+            <HomeProfile />
+            <Text style={styles.welcome}>Ready to consult with healthcare expert today?</Text>
+          </View>
           <View style={styles.wrapperScroll}>
             <ScrollView horizontal showsHorizontalScrollIndicator={false}>
               <View style={styles.category}>
-                <Gap width={16} />
+                <Gap width={32} />
                 <DoctorCategory />
                 <DoctorCategory />
                 <DoctorCategory />
                 <DoctorCategory />
-                <Gap width={6} />
+                <Gap width={22} />
               </View>
             </ScrollView>
           </View>
-          <Text style={styles.sectionLabel}>Top Rated Doctors</Text>
-          <RatedDoctor />
-          <RatedDoctor />
-          <RatedDoctor />
-          <Text style={styles.sectionLabel}>The Good News Gazette</Text>
+          <View style={styles.wrapperSection}>
+            <Text style={styles.sectionLabel}>Top Rated Doctors</Text>
+            <RatedDoctor />
+            <RatedDoctor />
+            <RatedDoctor />
+            <Text style={styles.sectionLabel}>The Good News Gazette</Text>
+          </View>
           <NewsItem />
           <NewsItem />
           <NewsItem />
@@ -45,10 +49,12 @@ const styles = StyleSheet.create({
   },
   content: {
     backgroundColor:         colors.white,
-    paddingHorizontal:       16,
     flex:                    1,
     borderBottomRightRadius: 20,
     borderBottomLeftRadius:  20,
+  },
+  wrapperSection: {
+    paddingHorizontal: 16,
   },
   welcome: {
     fontSize:     20,
