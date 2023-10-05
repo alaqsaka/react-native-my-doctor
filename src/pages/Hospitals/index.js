@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, ImageBackground } from 'react-native';
 import React from 'react';
-import { ILHospitalBackground } from '../../assets';
+import { DummyHospital1, DummyHospital2, DummyHospital3, ILHospitalBackground } from '../../assets';
 import { colors, fonts } from '../../utils';
 import { ListHospital } from '../../components';
 
@@ -12,9 +12,9 @@ export default function Hospitals() {
         <Text style={styles.desc}>Available 3</Text>
       </ImageBackground>
       <View style={styles.content}>
-        <ListHospital />
-        <ListHospital />
-        <ListHospital />
+        <ListHospital type="Rumah Sakit" name="Citra Bunga Merdeka 1" address="Jln. Surya Sejahtera 1" image={DummyHospital1} />
+        <ListHospital type="Rumah Sakit Anak" name="Citra Bunga Merdeka 2" address="Jln. Surya Sejahtera 2" image={DummyHospital2} />
+        <ListHospital type="Rumah Sakit Jiwa" name="Citra Bunga Merdeka 3" address="Jln. Surya Sejahtera 3" image={DummyHospital3} />
       </View>
     </View>
   );
